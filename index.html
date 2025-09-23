@@ -209,13 +209,19 @@
 
 
 
+
+
   <!-- Contact Section -->
   <section id="contact" class="section">
     <h2>Contact Us</h2>
-    <form>
+    <form action="https://formsubmit.co/el/kabise" method="POST">
       <input type="text" placeholder="Your Name" required>
       <input type="email" placeholder="Your Email" required>
       <textarea placeholder="Your Message"></textarea>
+
+        <!-- Optional: Redirect users after submission -->
+  <input type="hidden" name="_next" value="https://abdullahmalikny1.github.io/toplevelrestoration/thank-you.html">
+  <input type="hidden" name="_captcha" value="false">
       <button type="submit" class="btn">Send Message</button>
     </form>
   </section>
