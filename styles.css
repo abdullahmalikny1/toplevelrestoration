@@ -1,0 +1,1185 @@
+/* reset - MUST be first */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 100%; height: 100%; background: #0A192F; }
+
+/* ====== Navbar ====== */
+.navbar {
+  position: relative; /* so it always stays on top */
+  top: 0;
+  left: 0; /* <-- add this */
+  width: 100%;
+  background: rgba(10, 25, 47, 0.95);
+  box-shadow: 0 2px 15px rgba(0,0,0,0.5);
+  z-index: 1000;
+  transition: background 0.3s ease-in-out;
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 180px;  /* smaller logo for clean nav */
+  width: 200px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.logo img:hover {
+  transform: scale(1.08);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.nav-links a {
+  color: #F5F5F5;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.3s, border-bottom 0.3s;
+  padding-bottom: 4px;
+}
+.nav-links a:hover {
+  color: #FFD700;
+  border-bottom: 2px solid #FFD700;
+}
+
+/* ====== Hero Section ====== */
+.hero {
+  background: url('images/skyline_Nero_AI_Image_Upscaler_Photo_Face.png') no-repeat center center/cover;
+  height: 110vh; /* Full screen height */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* dark overlay so text pops */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  padding: 0 1rem;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #FFD700; /* gold */
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #E0E0E0;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #FFD700;
+  color: #0A192F;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #e6c200;
+  transform: translateY(-4px);
+}
+
+/* ====== Sections ====== */
+.section {
+  padding: 6rem 2rem;
+  text-align: center;
+}
+.section h2 {
+  color: #FFD700;
+  font-size: 2.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+.section p {
+  color: #000000;
+  max-width: 900px;
+  margin: 1rem auto;
+  font-size: 1.1rem;
+}
+
+/* ====== Services Grid ====== */
+.card {
+  background: #0A192F;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.35);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+/* Footer Logo Size */
+.footer-logo {
+  width: 180px;   /* adjust width as needed */
+  height: 180px;   /* maintain aspect ratio */
+  display: block;
+  margin-bottom: 1rem; /* optional spacing from text */
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.service-card {
+  display: block;
+  background: #0A192F;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Intro Section Styling */
+
+
+.service-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.service-card:hover img {
+  transform: scale(1.08);
+}
+
+.card-content {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.card-content h3 {
+  color: #FFD700;
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ====== Services Text Stronger Style ====== */
+.card-content p {
+  color: #ffffff;   /* brighter white text */
+  font-weight: 600; /* semi-bold */
+  font-size: 1.1rem; 
+  line-height: 1.6;
+}
+
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.5);
+}
+/* ====== Uniform Images ====== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* Hero background image remains full screen */
+.hero {
+  background: url('images/skyline_Nero_AI_Image_Upscaler_Photo_Face.png') no-repeat center center/cover;
+  height: 110vh;
+}
+.service-card img.small-image {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+/* Reset margins/padding on body and html */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background: #fff; /* keeps your main site background white */
+  overflow-x: hidden; /* prevents sideways scroll/white gap */
+}
+
+/* ====== Footer Styling ====== */
+/* full-bleed footer that ignores parent padding */
+footer {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;          /* make sure it's 100vw, not 100% */
+  background: #0A192F;
+  color: #ffffff;
+  padding: 3rem 0;
+  z-index: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+
+/* inner container stays centered and constrained */
+.footer-container {
+  max-width: 1300px;           /* or 1400px if you prefer */
+  margin: 0 auto;              /* center content */
+  padding: 0 2rem;             /* horizontal padding inside */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* content styles */
+.footer-section {
+  flex: 1 1 220px;
+  margin: 1rem 0;
+}
+
+.footer-section h3 {
+  color: #FFD700;
+  margin-bottom: 1.5rem;  /* increased from .75rem */
+  font-size: 1.2rem;      /* optional: make headings slightly larger */
+  font-weight: 600;       /* optional: makes headings stand out */
+}
+
+.footer-section p,
+.footer-section a,
+.footer-section li {
+  color: #fff;
+  margin-bottom: 0.75rem;  /* adds spacing between lines/items */
+}
+
+/* Quick Links */
+.footer-section.quick-links a {
+  display: block;          /* makes each link appear on its own line */
+  color: #fff;             /* footer link color */
+  text-decoration: none;   /* removes underline */
+  margin: 0.5rem 0;        /* spacing between links */
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.footer-section.quick-links a:hover {
+  color: #FFD700; /* gold accent on hover */
+}
+.footer-bottom {
+  text-align: center;     /* center the text */
+  width: 100%;            /* make sure it spans the full footer width */
+  padding: 1rem 0;
+  color: #ccc;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin: 0 auto;         /* optional: ensures it’s centered if needed */
+}
+
+/* Hero Section */
+.hero-about {
+  background: url('images/about-hero.jpg') no-repeat center center/cover;
+  height: 60vh;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+
+.hero-about .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-about .hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+}
+
+.hero-about h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #FFD700;
+}
+
+.hero-about p {
+  font-size: 1.25rem;
+  color: #E0E0E0;
+}
+
+/* Company History Section */
+.company-history {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.company-history h2 {
+  font-size: 2.5rem;
+  color: #0A192F;
+}
+
+.company-history p {
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 900px;
+  margin: 1rem auto;
+}
+.header-right .phone {
+  color: #ffffff;   /* white */
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.header-right .phone:hover {
+  color: #FFD700;   /* gold on hover */
+}
+/* Quote Page Styling */
+.quote-form-container {
+  max-width: 700px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.quote-form-container h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: #004d99; /* your site’s blue */
+}
+
+.quote-form-container p {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.quote-form label {
+  display: block;
+  margin: 1rem 0 0.3rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s;
+}
+
+.quote-form input:focus,
+.quote-form select:focus,
+.quote-form textarea:focus {
+  border-color: #004d99;
+  outline: none;
+}
+
+.quote-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Button inherits your existing .btn & .quote-btn styles */
+/* Quote Intro Section */
+.quote-intro {
+  background: linear-gradient(135deg, #0a192f, #1c3b57); /* deep navy gradient */
+  color: #fff;
+  text-align: center;
+  padding: 4rem 2rem;
+  border-radius: 12px;
+  margin: 3rem auto 2rem;
+  max-width: 1000px;
+  box-shadow: 0 6px 20px rgba(194, 194, 194, 0.2);
+}
+
+.quote-intro-content {  
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quote-intro h6 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.quote-intro h6::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: #d4af37; /* gold accent */
+  margin: 0.7rem auto 0;
+  border-radius: 2px;
+}
+
+.quote-intro p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #e6e6e6;
+  margin-top: 1.5rem;
+}
+/* Quote Section Form Container */
+form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 1000px;
+  margin: 30px auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  border-color: #d4af37; /* gold */
+  background: #fff;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+  outline: none;
+}
+.service-hero {
+  background-size: cover;
+  background-position: center top; /* shift focus upward */
+  height: 30vh; /* reduce height so less cropping */
+}
+
+
+.service-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: #0A192F
+}
+
+.service-hero h1 {
+  font-size: 3rem;
+  color: #FFD700;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.service-hero p {
+  font-size: 1.25rem;
+  color: #E0E0E0;
+  max-width: 800px;
+}
+.service-details {
+  width: 100%;             /* full browser width */
+  min-height: 100vh;       /* optional: full viewport height */
+  background: #0A192F;     /* navy blue background */
+  padding: 3rem 2rem;      /* spacing inside */
+  box-sizing: border-box;  /* ensures padding doesn’t break width */
+}
+/* Center the text content but still allow it to stretch */
+.service-details .card-content {
+  max-width: 1200px;       /* keeps text readable */
+  margin: 0 auto;          /* centers content */
+}
+.service-details .card-content p {
+  color: #ffffff;         /* bright white text */
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;  /* spacing between paragraphs */
+}
+.service-details .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 2rem;
+}
+
+.service-details .gallery img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.service-details .gallery img:hover {
+  transform: scale(1.05);
+}
+
+.service-details h2 {
+  color: #FFD700;
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+}
+
+.service-details p,
+.service-details li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #fff; /* if background is dark, otherwise #333 */
+}
+
+.service-details ul,
+.service-details ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.service-details img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  margin: 1.5rem 0;
+  border-radius: 10px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.35);
+}
+.service-details .btn {
+  display: inline-block;
+  margin: 2rem 0;
+  padding: 1rem 2rem;
+  background: #FFD700;
+  color: #0A192F;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.service-details .btn:hover {
+  background: #e6c200;
+  transform: translateY(-4px);
+}
+body.service-page {
+  background-color: #0A192F;
+  color: #fff;
+}
+
+body.service-page a {
+  color: #FFD700;
+}
+/* ===== Reviews Page ===== */
+.reviews-header {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #0A192F; /* same deep blue */
+  color: #FFD700;      /* gold text */
+}
+
+.reviews-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.review-form-section {
+  background: #f9f9f9;
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.review-form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  max-width: 600px;
+  width: 100%;
+}
+
+.review-form label {
+  display: block;
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #0A192F;
+}
+
+.review-form input,
+.review-form textarea {
+  width: 100%;
+  padding: 0.9rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.review-form textarea {
+  resize: none;
+}
+
+.review-form button {
+  background: #0A192F;
+  color: #FFD700;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.review-form button:hover {
+  background: #FFD700;
+  color: #0A192F;
+}
+
+/* Star Rating */
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  margin-top: 0.5rem;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: color 0.2s;
+  color: #ccc;
+}
+
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #FFD700;
+}
+/* ===== About Us Page Styles ===== */
+
+main {
+  max-width: 900px;
+  margin: 100px auto 50px auto; /* leaves room for navbar */
+  padding: 0 20px;
+}
+
+main h1, main h2, main h3 main h4{
+  color: #000;
+  font-weight: bold;
+}
+
+main p {
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin-bottom: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size:large;
+}
+
+/* Images */
+main img {
+  display: block;
+  margin: 30px auto;
+  max-width: 95%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* CEO Section */
+
+/* Contact Section */
+.contact-section {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  margin-top: 40px;
+  box-shadow: 0 4px 12px rgb(255, 255, 255);
+}
+
+.contact-section h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .ceo-section {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+/* Learn More Button */
+.learn-more-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #FFD700;   /* gold */
+  color: #0A192F;        /* navy text */
+  padding: 0.8rem 1.6rem;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.learn-more-btn:hover {
+  background: #e6c200;   /* darker gold */
+  transform: translateY(-4px);
+}
+.service-section img,
+.project-gallery img {
+  width: 100%;          /* makes image fill container width */
+  height: 300px;        /* fixed height for all images */
+  object-fit: cover;    /* crops evenly without stretching */
+  display: block;       /* removes bottom spacing */
+  border-radius: 10px;  /* optional: keep rounded corners consistent */
+}
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+/* ===== Background only for About Us page ===== */
+.about-section
+.about-section {
+  background: url('path-to-your-image.jpg') no-repeat center center;
+  background-size: cover;      /* makes image cover whole section */
+  position: relative;          /* needed for overlay if desired */
+  color: #0A192F;              /* navy blue text */
+  padding: 4rem 2rem;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.about-section .content {
+  background-color: rgba(255, 255, 255, 0.9); /* white overlay */
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* FAQ Page Styles */
+.faq {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgb(255, 255, 255);
+  font-family: Arial, sans-serif;
+}
+
+/* FAQ Title */
+.faq h1 {
+  color: #FFD700;
+  font-size: 2.75rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  font-family:'Times New Roman', Times, serif;
+}
+.faq h1::after {
+  content: "";
+  display: block;
+  width: 430px;
+  height: 4px;
+  background: #ffffff; /* gold accent */
+  margin: 0.8rem auto 0;
+  border-radius: 2px;
+}
+
+/* Each FAQ item */
+.faq details {
+  background: #0A192F;
+  margin-bottom: 1rem;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  transition: background 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.faq details:hover {
+  background: #FFD700;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+/* The question */
+.faq summary {
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 1.1rem;
+  list-style: none; /* removes default arrow spacing */
+  outline: none;
+  cursor: pointer;
+}
+
+/* Remove default triangle and add custom +/– icon */
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary::after {
+  content: "+";
+  float: right;
+  font-size: 1.2rem;
+  color: #ffffff;
+  transition: transform 0.3s;
+}
+
+.faq details[open] summary::after {
+  content: "–";
+}
+
+/* The answer */
+.faq p {
+  margin-top: 0.8rem;
+  line-height: 1.6;
+  color: #ffffff;
+  font-size: 1rem;
+}
+/* Review Form Styling */
+.review-form-container {
+  max-width: 900px;
+  margin: 3rem auto;
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgb(255, 255, 255);
+  font-family: Arial, sans-serif;
+}
+
+.review-form-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #0A192F; /* navy heading */
+  position: relative;
+}
+
+.review-form label {
+  display: block;
+  margin: 0.8rem 0 0.4rem;
+  font-weight: bold;
+  color: #0A192F;
+}
+
+.review-form input[type="text"],
+.review-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.2rem;
+  border-radius: 12px;
+  border: 1.5px solid #ccc;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.review-form input[type="text"]:focus,
+.review-form textarea:focus {
+  border: 1.5px solid #FFD700; /* gold focus effect */
+  outline: none;
+}
+
+.review-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.review-form button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background: #0A192F; /* navy button */
+  color: #FFD700;       /* gold text */
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.review-form button:hover {
+  background: #FFD700;  /* gold hover */
+  color: #0A192F;       /* navy text on hover */
+}
+
+/* Star Rating */
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.star-rating input[type="radio"] {
+  display: none;
+}
+
+.star-rating label {
+  font-size: 2rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.star-rating input[type="radio"]:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #FFD700; /* gold stars */
+}
+/* Only style the About Us main content card */
+.about-main .card-content {
+  max-width: 1200px;      /* readable width */
+  margin: 3rem auto;      /* center vertically */
+  padding: 2.5rem;
+  background: #ffffff;     /* white card */
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  color: #ffffff;         /* navy text inside card */
+}
+
+/* Headings inside About Us */
+.about-main h1,
+.about-main h2,
+.about-main h3,
+.about-main h4 {
+  color: #FFD700;
+  font-size: 2.75rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  font-family:'Times New Roman', Times, serif;
+  text-align: left;
+}
+
+/* Paragraphs */
+.about-main p {
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+}
+
+/* Contact Section */
+.contact-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.contact-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Images in About Us sections */
+.about-section img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Optional button styling */
+.about-main .btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  background: #FFD700; /* gold */
+  color: #0A192F;      /* navy text */
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.about-main .btn:hover {
+  background: #0A192F;
+  color: #FFD700;
+}
+/* About Us Page Content Styling */
+.about-main {
+  max-width: 1200px;       /* readable width */
+  margin: 3rem auto;       /* center content */
+  padding: 3.5rem;
+  background: #ffffff;     /* white content card */
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgb(255, 255, 255);
+  color: #0A192F;          /* navy text inside card */
+  font-family: Arial, sans-serif;
+}
+
+/* Headings */
+.about-main h2, 
+.about-main h3, 
+.about-main h4 {
+  color: #0A192F;          /* navy headings */
+  margin-bottom: 1rem;
+}
+
+/* Paragraphs */
+.about-main p {
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+}
+
+/* Contact Section */
+.contact-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.contact-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #0A192F;
+}
+
+/* Images inside About Us sections */
+.about-main img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Optional button styling for future use */
+.about-main .btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  background: #FFD700; /* gold */
+  color: #0A192F;      /* navy text */
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.about-main .btn:hover {
+  background: #0A192F;
+  color: #FFD700;
+}
+/* Social icons under Get a Free Quote */
+.header-right .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.header-right .social-icons img {
+  width: 48px;
+  height: 48px;
+  transition: transform 0.3s ease;
+}
+
+.header-right .social-icons img:hover {
+  transform: scale(1.2);
+}
+/* Style for the review box */
+.review-box {
+  background-color: #ffffff; /* light blue background */
+  padding: 20px;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1rem;
+}
+
+.review-box a {
+  color: #004d99;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.why-choose-us {
+  background-color: #ffffff;  /* white background */
+  color: #0A192F;             /* navy text */
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 15px;
+  margin: 30px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgb(255, 255, 255);
+  margin-bottom: 1px;
+}
+
+.why-choose-us h2 {
+  font-size: 2.7rem;
+  margin-bottom: 20px;
+  color: #FFD700; /* navy heading */
+  text-align: center;
+}
+
+.why-choose-us ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+  line-height: 2;
+}
+
+.why-choose-us li {
+  margin-bottom: 10px;
+  color: #0A192F; /* navy text */
+}
+
+.why-choose-us li::before {
+  content: "✅ ";
+  color: green; /* gold checkmark */
+}

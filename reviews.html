@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Submit Review</title>
+<link rel="stylesheet" href="styles.css"> <!-- your main CSS -->
+<style>
+/* Review Form Styles */
+.review-form-container {
+  max-width: 4500px;
+  margin: 2rem auto;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgb(255, 255, 255);
+}
+
+.review-form-container h2 {
+  color: #FFD700;
+  font-size: 2.75rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  font-family:'Times New Roman', Times, serif;
+}
+
+.review-form label {
+  display: block;
+  margin: 0.5rem 0 0.2rem;
+  font-weight: bold;
+  color: #0A192F;
+}
+
+.review-form input[type="text"],
+.review-form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.review-form button {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  background: #0A192F;
+  color: #FFD700;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.review-form button:hover {
+  background: #FFD700;
+}
+
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.star-rating input[type="radio"] {
+  display: none;
+}
+
+.star-rating label {
+  font-size: 1.8rem;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.star-rating input[type="radio"]:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #FFD700;
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="nav-container">
+    <!-- Left: Nav Links -->
+    <ul class="nav-links left-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+    </ul>
+
+    <!-- Center: Logo -->
+    <a href="index.html" class="logo">
+      <img src="images/transparent-Photoroom.jpg" alt="Top Level Restoration Logo">
+    </a>
+
+    <!-- Right: Phone + Button -->
+    <div class="header-right">
+      <a href="tel:9173621187" class="phone">📞 (917) 362-1187</a>
+      <a href="quote.html" class="btn quote-btn">Get a Free Quote</a>
+
+
+                <!-- Social Links Under Quote -->
+          <div class="social-icons">
+            <a href="https://nextdoor.com/business-profile/preview/" target="_blank" aria-label="Nextdoor">
+              <img src="images/nextdoorlogo-removebg-preview.png" alt="Nextdoor">
+            </a>
+            <a href="https://www.yelp.com/biz/top-level-restoration-corp-astoria-2" target="_blank" aria-label="Yelp">
+              <img src="images/yelplogo-removebg-preview.png" alt="Yelp">
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+<!-- Review Form -->
+<div class="review-form-container">
+  <h2>SUBMIT REVIEW</h2>
+  <form class="review-form">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+    <label for="job">What job did we do for you?</label>
+    <input type="text" id="job" name="job" placeholder="Describe the job" required>
+
+    <label for="rating">Rate us</label>
+    <div class="star-rating">
+      <input type="radio" id="5-stars" name="rating" value="5" /><label for="5-stars">★</label>
+      <input type="radio" id="4-stars" name="rating" value="4" /><label for="4-stars">★</label>
+      <input type="radio" id="3-stars" name="rating" value="3" /><label for="3-stars">★</label>
+      <input type="radio" id="2-stars" name="rating" value="2" /><label for="2-stars">★</label>
+      <input type="radio" id="1-star" name="rating" value="1" /><label for="1-star">★</label>
+    </div>
+
+    <label for="review">Write your review here...</label>
+    <textarea id="review" name="review" rows="5" placeholder="Your review..." required></textarea>
+
+    <button type="submit">Submit Review</button>
+  </form>
+</div>
+
+</body>
+</html>
+<!-- Footer -->
+ <footer>
+  <div class="footer-container">
+<!-- Contact Info -->
+<div class="footer-section footer-contact">
+  <h3>Contact Us</h3>
+  <p>📞 (917) 362-1187</p>
+  <p>📧 toplevelrestorations@gmail.com</p>
+  <img src="images/transparent-Photoroom.jpg" alt="Top Level Restoration Logo">
+</div>
+
+
+    <!-- Hours -->
+    <div class="footer-section">
+      <h3>Hours of Operation</h3>
+      <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
+      <p>Sat: 9:00 AM - 5:00 PM</p>
+      <p>Sun: 9:00 AM - 4:00 PM</p>
+      <p>Call us 7 days a week for service or a free estimate!</p>
+    </div>
+
+    <!-- Areas Served -->
+    <div class="footer-section">
+      <h3>Areas Served</h3>
+      <p class="footer-areas">Queens</p>
+      <p class="footer-areas">Brooklyn</p>
+      <p class="footer-areas">Bronx</p>
+      <p class="footer-areas">Manhattan</p>
+      <p class="footer-areas">Staten Island</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section quick-links">
+      <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="about-us.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="faq.html">FAQ</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="quote.html">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 Top Level Restoration Corp. All Rights Reserved.
+  </div>
+</footer>
