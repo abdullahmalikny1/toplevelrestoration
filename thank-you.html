@@ -4,24 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thank You</title>
+  <link rel="stylesheet" href="styles.css"> <!-- your existing site CSS -->
   <style>
+    /* Extra thank-you page styling */
     body {
-      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: #f4f4f4;
+      margin: 0;
+    }
+
+    .thankyou-container {
+      background: #fff;
+      padding: 2rem 3rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       text-align: center;
-      padding: 50px;
-      background: #f9f9f9;
+      max-width: 600px;
     }
-    h1 {
+
+    .thankyou-container h1 {
       color: #004d99;
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
     }
-    p {
-      margin-top: 15px;
+
+    .thankyou-container p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+
+    .thankyou-container .btn {
+      display: inline-block;
+      background: #004d99;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    .thankyou-container .btn:hover {
+      background: #003366;
     }
   </style>
 </head>
 <body>
-  <h1>🎉 Thank You!</h1>
-  <p>Your message has been successfully sent. We’ll get back to you soon.</p>
-  <a href="index.html">⬅ Back to Home</a>
+  <div class="thankyou-container">
+    <h1>Thank You!</h1>
+    <p>Your message has been successfully sent. We’ll get back to you as soon as possible.</p>
+    <a href="index.html" class="btn">Return to Home</a>
+  </div>
 </body>
 </html>
