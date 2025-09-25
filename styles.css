@@ -1183,3 +1183,18 @@ main img {
   content: "✅ ";
   color: green; /* gold checkmark */
 }
+/* Make footer appear immediately after content */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  flex: 1; /* Push footer down only if content is short */
+}
+section:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
