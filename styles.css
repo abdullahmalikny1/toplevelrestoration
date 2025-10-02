@@ -1,3 +1,7 @@
+/* reset - MUST be first */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 100%; height: 100%; background: #0A192F; }
+
 /* ====== Navbar ====== */
 .navbar {
   position: relative; /* so it always stays on top */
@@ -50,13 +54,20 @@
 /* ====== Hero Section ====== */
 .hero {
   background: url('images/skyline_Nero_AI_Image_Upscaler_Photo_Face.png') no-repeat center center/cover;
-  min-height: 150vh;
+  height: 110vh; /* Full screen height */
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
   text-align: center;
+  overflow: hidden;
+}
+
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* dark overlay so text pops */
 }
 
 .hero-content {
@@ -206,6 +217,12 @@ img {
   display: block;
 }
 
+
+/* Hero background image remains full screen */
+.hero {
+  background: url('images/skyline_Nero_AI_Image_Upscaler_Photo_Face.png') no-repeat center center/cover;
+  height: 110vh;
+}
 .service-card img.small-image {
   width: 100%;
   height: 380px;
@@ -226,11 +243,18 @@ html, body {
 /* ====== Footer Styling ====== */
 /* full-bleed footer that ignores parent padding */
 footer {
-  width: 100%;            /* span full page width */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;          /* make sure it's 100vw, not 100% */
   background: #0A192F;
   color: #ffffff;
   padding: 3rem 0;
+  z-index: 0;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 
@@ -692,7 +716,7 @@ main {
   padding: 0 20px;
 }
 
-main h1, main h2, main h3, main h4{
+main h1, main h2, main h3 main h4{
   color: #000;
   font-weight: bold;
 }
@@ -1158,29 +1182,4 @@ main img {
 .why-choose-us li::before {
   content: "✅ ";
   color: green; /* gold checkmark */
-}
-/* Make footer appear immediately after content */
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
-}
-
-main {
-  flex: 1; /* Push footer down only if content is short */
-}
-section:last-of-type {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.hero .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  /* optional dark overlay if you have that */
 }
