@@ -531,7 +531,7 @@ form select:focus {
 .service-details {
   width: 100%;             /* full browser width */
   min-height: 100vh;       /* optional: full viewport height */
-  background: #0A192F;     /* navy blue background */
+  background-color: #0A192F;     /* navy blue background */
   padding: 3rem 2rem;      /* spacing inside */
   box-sizing: border-box;  /* ensures padding doesn’t break width */
 }
