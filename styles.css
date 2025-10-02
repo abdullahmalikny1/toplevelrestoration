@@ -234,7 +234,7 @@ footer {
   width: 100vw;          /* make sure it's 100vw, not 100% */
   background: #0A192F;
   color: #ffffff;
-  padding: 2rem 0;
+  padding: 4rem 0;
   z-index: 0;
   box-sizing: border-box;
   overflow: hidden;
