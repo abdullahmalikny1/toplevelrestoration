@@ -50,7 +50,7 @@
 /* ====== Hero Section ====== */
 .hero {
   background: url('images/skyline_Nero_AI_Image_Upscaler_Photo_Face.png') no-repeat center center/cover;
-  min-height: 120vh;
+  min-height: 150vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -226,18 +226,11 @@ html, body {
 /* ====== Footer Styling ====== */
 /* full-bleed footer that ignores parent padding */
 footer {
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  width: 100vw;
-  background: #0A192F !important; /* force navy background */
+  width: 100%;            /* span full page width */
+  background: #0A192F;
   color: #ffffff;
   padding: 3rem 0;
-  z-index: 0;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 
@@ -517,7 +510,6 @@ form select:focus {
   background: #0A192F;     /* navy blue background */
   padding: 3rem 2rem;      /* spacing inside */
   box-sizing: border-box;  /* ensures padding doesn’t break width */
-  padding-bottom: 6rem;
 }
 /* Center the text content but still allow it to stretch */
 .service-details .card-content {
@@ -593,6 +585,7 @@ form select:focus {
 }
 body.service-page {
   background-color: #0A192F;
+  color: #fff;
 }
 
 body.service-page a {
@@ -806,7 +799,7 @@ main img {
   padding: 2rem;
   background: #ffffff;
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(255, 255, 255,);
+  box-shadow: 0 4px 15px rgb(255, 255, 255);
   font-family: Arial, sans-serif;
 }
 
@@ -833,24 +826,18 @@ main img {
 .faq details {
   background: #0A192F;
   margin-bottom: 1rem;
+  padding: 1rem 1.2rem;
   border-radius: 10px;
   border: 1px solid #ddd;
-  transition: max-height 0.3s ease, padding 0.3s ease;
+  transition: background 0.3s, box-shadow 0.3s;
   cursor: pointer;
-  overflow: hidden;
-  max-height: 60px;
-  padding: 1rem 1.2rem;
 }
 
 .faq details:hover {
   background: #FFD700;
   box-shadow: 0 3px 8px rgba(0,0,0,0.08);
 }
-/* Opened state */
-.faq details[open] {
-  max-height: 500px; /* adjust depending on content length */
-  padding: 1rem 1.2rem 2rem 1.2rem; /* more space for answer */
-}
+
 /* The question */
 .faq summary {
   font-weight: bold;
@@ -1063,6 +1050,12 @@ main img {
   margin-bottom: 1rem;
 }
 
+/* Paragraphs */
+.about-main p {
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+}
+
 /* Contact Section */
 .contact-section {
   margin-top: 2rem;
@@ -1082,13 +1075,23 @@ main img {
   margin-bottom: 1.5rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
-.about-main .ceo-img {
-  max-width: 300px; /* adjust as needed */
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  display: block;
-  margin: 0 auto; /* center image */
+
+/* Optional button styling for future use */
+.about-main .btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  background: #FFD700; /* gold */
+  color: #0A192F;      /* navy text */
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.about-main .btn:hover {
+  background: #0A192F;
+  color: #FFD700;
 }
 /* Social icons under Get a Free Quote */
 .header-right .social-icons {
@@ -1162,7 +1165,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  background-color: #0A192F;
 }
 
 main {
