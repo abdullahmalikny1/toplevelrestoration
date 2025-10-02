@@ -806,7 +806,7 @@ main img {
   padding: 2rem;
   background: #ffffff;
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgb(255, 255, 255);
+  box-shadow: 0 4px 15px rgba(255, 255, 255,);
   font-family: Arial, sans-serif;
 }
 
@@ -833,18 +833,24 @@ main img {
 .faq details {
   background: #0A192F;
   margin-bottom: 1rem;
-  padding: 1rem 1.2rem;
   border-radius: 10px;
   border: 1px solid #ddd;
-  transition: background 0.3s, box-shadow 0.3s;
+  transition: max-height 0.3s ease, padding 0.3s ease;
   cursor: pointer;
+  overflow: hidden;
+  max-height: 60px;
+  padding: 1rem 1.2rem;
 }
 
 .faq details:hover {
   background: #FFD700;
   box-shadow: 0 3px 8px rgba(0,0,0,0.08);
 }
-
+/* Opened state */
+.faq details[open] {
+  max-height: 500px; /* adjust depending on content length */
+  padding: 1rem 1.2rem 2rem 1.2rem; /* more space for answer */
+}
 /* The question */
 .faq summary {
   font-weight: bold;
@@ -1077,7 +1083,7 @@ main img {
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 .about-main .ceo-img {
-  max-width: 400px; /* adjust as needed */
+  max-width: 300px; /* adjust as needed */
   width: 100%;
   height: auto;
   border-radius: 12px;
@@ -1156,6 +1162,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
+  background-color: #0A192F;
 }
 
 main {
