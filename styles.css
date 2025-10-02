@@ -50,7 +50,7 @@
 /* ====== Hero Section ====== */
 .hero {
   background: url('images/skyline_Nero_AI_Image_Upscaler_Photo_Face.png') no-repeat center center/cover;
-  min-height: 150vh;
+  min-height: 120vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -226,11 +226,18 @@ html, body {
 /* ====== Footer Styling ====== */
 /* full-bleed footer that ignores parent padding */
 footer {
-  width: 100%;            /* span full page width */
-  background: #0A192F;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  background: #0A192F !important; /* force navy background */
   color: #ffffff;
   padding: 3rem 0;
+  z-index: 0;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 
@@ -510,6 +517,7 @@ form select:focus {
   background: #0A192F;     /* navy blue background */
   padding: 3rem 2rem;      /* spacing inside */
   box-sizing: border-box;  /* ensures padding doesn’t break width */
+  padding-bottom: 6rem;
 }
 /* Center the text content but still allow it to stretch */
 .service-details .card-content {
@@ -585,7 +593,6 @@ form select:focus {
 }
 body.service-page {
   background-color: #0A192F;
-  color: #fff;
 }
 
 body.service-page a {
@@ -1050,12 +1057,6 @@ main img {
   margin-bottom: 1rem;
 }
 
-/* Paragraphs */
-.about-main p {
-  margin-bottom: 1.2rem;
-  line-height: 1.7;
-}
-
 /* Contact Section */
 .contact-section {
   margin-top: 2rem;
@@ -1075,23 +1076,13 @@ main img {
   margin-bottom: 1.5rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
-
-/* Optional button styling for future use */
-.about-main .btn {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 0.8rem 2rem;
-  background: #FFD700; /* gold */
-  color: #0A192F;      /* navy text */
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s;
-}
-
-.about-main .btn:hover {
-  background: #0A192F;
-  color: #FFD700;
+.about-main .ceo-img {
+  max-width: 400px; /* adjust as needed */
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto; /* center image */
 }
 /* Social icons under Get a Free Quote */
 .header-right .social-icons {
