@@ -226,18 +226,11 @@ html, body {
 /* ====== Footer Styling ====== */
 /* full-bleed footer that ignores parent padding */
 footer {
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  width: 100vw;          /* make sure it's 100vw, not 100% */
+  width: 100%;            /* span full page width */
   background: #0A192F;
   color: #ffffff;
-  padding: 4rem 0;
-  z-index: 0;
+  padding: 3rem 0;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 
