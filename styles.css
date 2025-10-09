@@ -1117,6 +1117,14 @@ main img {
   background: #0A192F;
   color: #FFD700;
 }
+.ceo-photo {
+  width: 260px;       /* adjust to your liking */
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: 1.5rem auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
 /* Social icons under Get a Free Quote */
 .header-right .social-icons {
   display: flex;
