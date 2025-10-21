@@ -739,27 +739,7 @@ main img {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* CEO Section */
 
-/* Contact Section */
-.contact-section {
-  background-color: #ffffff;
-  padding: 20px;
-  text-align: center;
-  border-radius: 12px;
-  margin-top: 40px;
-  box-shadow: 0 4px 12px rgb(255, 255, 255);
-}
-
-.contact-section h3 {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.contact-section p {
-  font-size: 1.2rem;
-  margin: 0;
-}
 
 /* Responsive */
 @media(max-width: 768px) {
@@ -799,7 +779,7 @@ main img {
   gap: 20px;
 }
 /* ===== Background only for About Us page ===== */
-.about-section {
+.about-section .content {
   background: url('path-to-your-image.jpg') no-repeat center center;
   background-size: cover;      /* makes image cover whole section */
   position: relative;          /* needed for overlay if desired */
@@ -808,12 +788,15 @@ main img {
   font-family:Arial, Helvetica, sans-serif;
 }
 
-.about-section .content {
-  background-color: rgba(255, 255, 255, 0.9); /* white overlay */
-  padding: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
+.about-main {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 3.5rem;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgb(255, 255, 255);
+  color: #0A192F;
+  font-family: Arial, sans-serif;
 }
 
 /* FAQ Page Styles */
@@ -987,16 +970,6 @@ main img {
 .star-rating label:hover ~ label {
   color: #FFD700; /* gold stars */
 }
-/* Only style the About Us main content card */
-.about-main .card-content {
-  max-width: 1200px;      /* readable width */
-  margin: 3rem auto;      /* center vertically */
-  padding: 2.5rem;
-  background: #ffffff;     /* white card */
-  border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-  color: #ffffff;         /* navy text inside card */
-}
 
 /* Headings inside About Us */
 .about-main h1,
@@ -1004,7 +977,7 @@ main img {
 .about-main h3,
 .about-main h4 {
   color: #FFD700;
-  font-size: 2.75rem;
+  font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
   letter-spacing: 1px;
@@ -1018,17 +991,6 @@ main img {
   line-height: 1.7;
 }
 
-/* Contact Section */
-.contact-section {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.contact-section h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
 /* Images in About Us sections */
 .about-section img {
   width: 100%;
@@ -1036,7 +998,21 @@ main img {
   margin-bottom: 1.5rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
-
+.about-main .btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  background: #FFD700;
+  color: #0A192F;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+.about-main .btn:hover {
+  background: #0A192F;
+  color: #FFD700;
+}
 /* Optional button styling */
 .about-main .btn {
   display: inline-block;
@@ -1049,11 +1025,6 @@ main img {
   font-weight: bold;
   transition: all 0.3s;
 }
-
-.about-main .btn:hover {
-  background: #0A192F;
-  color: #FFD700;
-}
 /* About Us Page Content Styling */
 .about-main {
   max-width: 1200px;       /* readable width */
@@ -1064,14 +1035,6 @@ main img {
   box-shadow: 0 6px 20px rgb(255, 255, 255);
   color: #0A192F;          /* navy text inside card */
   font-family: Arial, sans-serif;
-}
-
-/* Headings */
-.about-main h2, 
-.about-main h3, 
-.about-main h4 {
-  color: #0A192F;          /* navy headings */
-  margin-bottom: 1rem;
 }
 
 /* Paragraphs */
@@ -1091,28 +1054,6 @@ main img {
   margin-bottom: 0.5rem;
   color: #0A192F;
 }
-
-/* Images inside About Us sections */
-.about-main img {
-  width: 100%;
-  border-radius: 12px;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-/* Optional button styling for future use */
-.about-main .btn {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 0.8rem 2rem;
-  background: #FFD700; /* gold */
-  color: #0A192F;      /* navy text */
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s;
-}
-
 .about-main .btn:hover {
   background: #0A192F;
   color: #FFD700;
