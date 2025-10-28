@@ -1191,8 +1191,6 @@ main img {
     flex-direction: column;
     text-align: center;
     padding: 20px;
-    max-width: 1000;
-    width: 900;
   }
 
   .ceo-text {
