@@ -1058,14 +1058,6 @@ main img {
   background: #0A192F;
   color: #FFD700;
 }
-.ceo-photo {
-  width: 260px;       /* adjust to your liking */
-  height: auto;
-  border-radius: 12px;
-  display: block;
-  margin: 1.5rem auto;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
 /* Social icons under Get a Free Quote */
 .header-right .social-icons {
   display: flex;
@@ -1131,4 +1123,68 @@ main img {
 .why-choose-us li::before {
   content: "✅ ";
   color: green; /* gold checkmark */
+}
+/* === CEO Section === */
+.ceo-section {
+  text-align: center;
+  margin: 60px auto;
+  max-width: 900px;
+}
+
+.ceo-section h1 {
+  color: #0A192F;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.ceo-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 30px 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  gap: 2rem;
+}
+
+.ceo-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #FFD700;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.ceo-text {
+  max-width: 600px;
+  text-align: left;
+}
+
+.ceo-text h4 {
+  color: #0A192F;
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+}
+
+.ceo-text p {
+  color: #0A192F;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* Responsive (for phones/tablets) */
+@media (max-width: 768px) {
+  .ceo-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .ceo-text {
+    text-align: center;
+  }
 }
