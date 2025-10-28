@@ -1126,29 +1126,35 @@ main img {
 }
 /* === CEO Section === */
 .ceo-section {
-  text-align: center;
-  margin: 60px auto;
-  max-width: 900px;
+  text-align: left;              /* align to match rest of site */
+  margin: 80px auto;
+  max-width: 1000px;             /* wider to align with page width */
+  padding: 0 2rem;
 }
 
 .ceo-section h1 {
-  color: #0A192F;
-  font-size: 2.2rem;
+  color: #FFD700;                /* gold like other headings */
+  font-size: 2.5rem;
   margin-bottom: 2rem;
-  font-weight: bold;
+  font-weight: 800;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: left;
 }
 
+/* CEO Card Box */
 .ceo-card {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   background: #ffffff;
   border-radius: 15px;
-  padding: 30px 40px;
+  padding: 40px 50px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   gap: 2rem;
+  max-width: 900px;
 }
 
+/* CEO Image */
 .ceo-photo {
   width: 180px;
   height: 180px;
@@ -1158,6 +1164,7 @@ main img {
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
+/* Text next to image */
 .ceo-text {
   max-width: 600px;
   text-align: left;
@@ -1176,7 +1183,7 @@ main img {
   font-size: 1rem;
 }
 
-/* Responsive (for phones/tablets) */
+/* Responsive layout for smaller screens */
 @media (max-width: 768px) {
   .ceo-card {
     flex-direction: column;
@@ -1185,6 +1192,15 @@ main img {
   }
 
   .ceo-text {
+    text-align: center;
+  }
+
+  .ceo-section {
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .ceo-section h1 {
     text-align: center;
   }
 }
