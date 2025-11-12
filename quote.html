@@ -56,6 +56,21 @@
 <input type="file" id="photos" name="photos[]" accept="image/*" multiple>
 <div id="preview" style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;"></div>
 
+      <!-- Buttons -->
+      <div class="quote-buttons">
+        <button type="submit" class="quote-btn">Submit</button>
+        <button type="button" class="quote-btn" onclick="window.location.href='index.html'">Back</button>
+      </div>
+    </form>
+  </section>
+  <!-- Buttons -->
+<div class="quote-buttons">
+  <button type="submit" class="quote-btn">Submit</button>
+  <button type="button" class="quote-btn" onclick="window.location.href='index.html'">Back</button>
+</div>
+</form>
+</section>
+
 <script>
 document.getElementById('photos').addEventListener('change', function(event) {
   const preview = document.getElementById('preview');
@@ -98,16 +113,6 @@ document.getElementById('photos').addEventListener('change', function(event) {
   }
 });
 </script>
-
-
-      <!-- Buttons -->
-      <div class="quote-buttons">
-        <button type="submit" class="quote-btn">Submit</button>
-        <button type="button" class="quote-btn" onclick="window.location.href='index.html'">Back</button>
-      </div>
-    </form>
-  </section>
 </body>
 </html>
-
 
