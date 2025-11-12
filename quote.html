@@ -36,6 +36,7 @@
 
       <label for="service">Service Interested In</label>
       <select id="service" name="service">
+        <option></option>
         <option>Home Renovations & Additions</option>
         <option>Roofing</option>
         <option>Framing & Structural Work</option>
@@ -53,7 +54,7 @@
       <textarea id="message" name="message"></textarea>
 
       <label for="photos">Upload Photos (optional):</label>
-      <input type="file" id="photos" name="photos" accept="image/*" multiple>
+      <input type="file" id="photos" name="photos[]" accept="image/*" multiple>
 
       <!-- Buttons -->
       <div class="quote-buttons">
