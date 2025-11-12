@@ -45,100 +45,17 @@
     </nav>
 
   <!-- Hero Section -->
-<!-- Hero Slideshow Section -->
-<section class="hero">
-  <div class="slideshow-container">
-    <div class="slide fade">
-      <img src="images/main-hero.jpg" alt="Main Construction Image">
-    </div>
-    <div class="slide fade">
-      <img src="images/team-working1.jpg" alt="Team Working 1">
-    </div>
-    <div class="slide fade">
-      <img src="images/team-working2.jpg" alt="Team Working 2">
-    </div>
-
-    <!-- Navigation Arrows -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-
-  <!-- Hero Text Overlay -->
-  <div class="hero-text">
-    <h1>TOMORROW’S LIVING BUILT TODAY</h1>
+<section id="home" class="hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>Tomorrow’s Living</h1>
+    <h1>Built Today</h1>
     <p>Proudly Serving New York with Quality Construction Services</p>
+
+
     <a href="services.html" class="btn">Our Services</a>
   </div>
 </section>
-
-<style>
-.hero {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-}
-
-.slideshow-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.7); /* keeps text readable */
-}
-
-.hero-text {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #FFD700;
-  z-index: 10;
-}
-
-
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 25px;
-  background-color: #FFD700;
-  color: black;
-  border-radius: 5px;
-  font-weight: bold;
-  text-decoration: none;
-}
-</style>
-
-<script>
-let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Show slides
-function showSlides(n) {
-  const slides = document.getElementsByClassName("slide");
-  if (n > slides.length) { slideIndex = 1; }
-  if (n < 1) { slideIndex = slides.length; }
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slides[slideIndex - 1].style.display = "block";
-}
-
-// Auto-advance every 5 seconds
-setInterval(() => plusSlides(1), 5000);
-</script>
-
 <!-- Why Choose Us Section -->
 <section class="why-choose-us">
   <h2>Why Choose Us?</h2>
