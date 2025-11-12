@@ -54,31 +54,6 @@
 
       <label for="photos">Upload Photos (optional):</label>
 <input type="file" id="photos" name="photos[]" accept="image/*" multiple>
-<div id="preview-container"></div>
-
-<script>
-const photoInput = document.getElementById('photos');
-const previewContainer = document.getElementById('preview-container');
-
-photoInput.addEventListener('change', () => {
-  previewContainer.innerHTML = ''; // clear old previews
-  for (const file of photoInput.files) {
-    const reader = new FileReader();
-    reader.onload = e => {
-      const div = document.createElement('div');
-      div.classList.add('preview-item');
-      div.innerHTML = `
-        <img src="${e.target.result}" alt="${file.name}">
-        <p>${file.name}</p>
-      `;
-      previewContainer.appendChild(div);
-    };
-    reader.readAsDataURL(file);
-  }
-});
-</script>
-
-
 <div id="preview" style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;"></div>
 
 <script>
