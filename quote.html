@@ -26,27 +26,34 @@
   </section>
 
   <section>
-    <form action="submit.php" method="post" class="quote-form">
+    <form action="submit.php" method="post" class="quote-form" enctype="multipart/form-data">
+
       <label for="name">Full Name</label>
       <input type="text" id="name" name="name" required>
-
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" required>
 
       <label for="phone">Phone Number</label>
       <input type="tel" id="phone" name="phone" required>
 
       <label for="service">Service Interested In</label>
       <select id="service" name="service">
-        <option>General Construction</option>
-        <option>Painting</option>
-        <option>Framing</option>
-        <option>Concrete</option>
+        <option>Home Renovations & Additions</option>
+        <option>Roofing</option>
+        <option>Framing & Structural Work</option>
+        <option>Concrete Sidewalk Installation & Repair</option>
+        <option>Paver Installation & Repair</option>
+        <option>Masonry Work</option>
+        <option>Drywall & Painting</option>
+        <option>Plumbing</option>
+        <option>Interior Work</option>
+        <option>Electrical Services</option>
         <option>Other</option>
       </select>
 
       <label for="message">Additional Details</label>
       <textarea id="message" name="message"></textarea>
+
+      <label for="photos">Upload Photos (optional):</label>
+      <input type="file" id="photos" name="photos" accept="image/*" multiple>
 
       <!-- Buttons -->
       <div class="quote-buttons">
