@@ -36,7 +36,6 @@
 
       <label for="service">Service Interested In</label>
       <select id="service" name="service">
-        <option></option>
         <option>Home Renovations & Additions</option>
         <option>Roofing</option>
         <option>Framing & Structural Work</option>
@@ -55,6 +54,53 @@
 
       <label for="photos">Upload Photos (optional):</label>
       <input type="file" id="photos" name="photos[]" accept="image/*" multiple>
+      <label for="photos">Upload Photos (optional):</label>
+<input type="file" id="photos" name="photos[]" accept="image/*" multiple>
+<div id="preview" style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;"></div>
+
+<script>
+document.getElementById('photos').addEventListener('change', function(event) {
+  const preview = document.getElementById('preview');
+  preview.innerHTML = ''; // clear previous
+  const files = event.target.files;
+  
+  for (let i = 0; i < files.length; i++) {
+    const file = files[i];
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      const container = document.createElement('div');
+      container.style.display = 'flex';
+      container.style.flexDirection = 'column';
+      container.style.alignItems = 'center';
+      container.style.fontSize = '12px';
+      container.style.width = '100px';
+      
+      const img = document.createElement('img');
+      img.src = e.target.result;
+      img.style.width = '100px';
+      img.style.height = '100px';
+      img.style.objectFit = 'cover';
+      img.style.borderRadius = '8px';
+      img.style.boxShadow = '0 0 5px rgba(0,0,0,0.2)';
+      
+      const name = document.createElement('div');
+      name.textContent = file.name;
+      name.style.marginTop = '5px';
+      name.style.textAlign = 'center';
+      name.style.overflow = 'hidden';
+      name.style.textOverflow = 'ellipsis';
+      name.style.whiteSpace = 'nowrap';
+      name.style.width = '100px';
+      
+      container.appendChild(img);
+      container.appendChild(name);
+      preview.appendChild(container);
+    };
+    reader.readAsDataURL(file);
+  }
+});
+</script>
+
 
       <!-- Buttons -->
       <div class="quote-buttons">

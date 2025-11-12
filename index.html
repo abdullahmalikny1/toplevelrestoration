@@ -52,58 +52,116 @@
     <h1>Built Today</h1>
     <p>Proudly Serving New York with Quality Construction Services</p>
 
-  <section class="slideshow">
-  <div class="slider">
-    <img src="images/skyline_Nero_AI_Image_Upscaler_Photo_Face (1).png" alt="Main team photo" class="active">
-    <img src="images/team1.jpg" alt="Our crew working on site">
-    <img src="images/team2.jpg" alt="Roof installation in progress">
-    <img src="images/team3.jpg" alt="Concrete repair project">
+    <section class="hero">
+  <div class="slideshow-container">
+    <div class="slide fade">
+      <img src="images/main-hero.jpg" alt="Main Construction Image">
+    </div>
+    <div class="slide fade">
+      <img src="images/team-working1.jpg" alt="Team Working 1">
+    </div>
+    <div class="slide fade">
+      <img src="images/team-working2.jpg" alt="Team Working 2">
+    </div>
+
+    <!-- Navigation arrows -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
 
-  <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-  <button class="next" onclick="moveSlide(1)">&#10095;</button>
+  <div class="hero-text">
+    <h1>TOMORROW’S LIVING BUILT TODAY</h1>
+    <p>Proudly Serving New York with Quality Construction Services</p>
+    <a href="services.html" class="btn">Our Services</a>
+  </div>
 </section>
 
 <style>
-.slideshow {
+.hero {
   position: relative;
-  max-width: 100%;
-  margin: 20px auto;
+  height: 100vh;
   overflow: hidden;
-  border-radius: 12px;
 }
-.slider img {
-  width: 100%;
+
+.slideshow-container {
+  position: relative;
+  height: 100%;
+}
+
+.slide {
   display: none;
+  height: 100%;
 }
-.slider img.active {
-  display: block;
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
 .prev, .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
+  padding: 16px;
   color: white;
-  font-size: 24px;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 4px;
+  font-weight: bold;
+  font-size: 30px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0,0,0,0.3);
+  transform: translateY(-50%);
 }
-.prev { left: 10px; }
-.next { right: 10px; }
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.6);
+}
+
+.hero-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #FFD700;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 25px;
+  background-color: #FFD700;
+  color: black;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+}
 </style>
 
 <script>
 let slideIndex = 0;
-const slides = document.querySelectorAll('.slider img');
-function moveSlide(n) {
-  slides[slideIndex].classList.remove('active');
-  slideIndex = (slideIndex + n + slides.length) % slides.length;
-  slides[slideIndex].classList.add('active');
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  const slides = document.getElementsByClassName("slide");
+  if (n >= slides.length) { slideIndex = 0 }
+  if (n < 0) { slideIndex = slides.length - 1 }
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex].style.display = "block";
 }
 </script>
+
 
     <a href="services.html" class="btn">Our Services</a>
   </div>
