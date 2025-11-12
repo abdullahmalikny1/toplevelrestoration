@@ -45,14 +45,8 @@
     </nav>
 
   <!-- Hero Section -->
-<section id="home" class="hero">
-  <div class="overlay"></div>
-  <div class="hero-content">
-    <h1>Tomorrow’s Living</h1>
-    <h1>Built Today</h1>
-    <p>Proudly Serving New York with Quality Construction Services</p>
-
-    <section class="hero">
+<!-- Hero Slideshow Section -->
+<section class="hero">
   <div class="slideshow-container">
     <div class="slide fade">
       <img src="images/main-hero.jpg" alt="Main Construction Image">
@@ -64,11 +58,12 @@
       <img src="images/team-working2.jpg" alt="Team Working 2">
     </div>
 
-    <!-- Navigation arrows -->
+    <!-- Navigation Arrows -->
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
 
+  <!-- Hero Text Overlay -->
   <div class="hero-text">
     <h1>TOMORROW’S LIVING BUILT TODAY</h1>
     <p>Proudly Serving New York with Quality Construction Services</p>
@@ -85,11 +80,13 @@
 
 .slideshow-container {
   position: relative;
+  width: 100%;
   height: 100%;
 }
 
 .slide {
   display: none;
+  width: 100%;
   height: 100%;
 }
 
@@ -99,6 +96,7 @@
   object-fit: cover;
 }
 
+/* Arrows */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -107,21 +105,21 @@
   color: white;
   font-weight: bold;
   font-size: 30px;
-  border-radius: 0 3px 3px 0;
   user-select: none;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
   transform: translateY(-50%);
 }
 
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
 }
 
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
+/* Text Overlay */
 .hero-text {
   position: absolute;
   top: 40%;
@@ -145,27 +143,25 @@
 
 <script>
 let slideIndex = 0;
-showSlides(slideIndex);
+showSlides();
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  slideIndex += n - 1; // Adjust for auto loop
+  showSlides();
 }
 
-function showSlides(n) {
+function showSlides() {
   const slides = document.getElementsByClassName("slide");
-  if (n >= slides.length) { slideIndex = 0 }
-  if (n < 0) { slideIndex = slides.length - 1 }
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  slides[slideIndex].style.display = "block";
+  slideIndex++;
+  if (slideIndex > slides.length) { slideIndex = 1; }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 5000); // Change every 5 seconds
 }
 </script>
 
-
-    <a href="services.html" class="btn">Our Services</a>
-  </div>
-</section>
 <!-- Why Choose Us Section -->
 <section class="why-choose-us">
   <h2>Why Choose Us?</h2>
