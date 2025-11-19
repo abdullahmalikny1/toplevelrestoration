@@ -36,6 +36,7 @@
 
       <label for="service">Service Interested In</label>
       <select id="service" name="service">
+        <option value="" disabled selected>Select a Service</option>
         <option>Home Renovations & Additions</option>
         <option>Roofing</option>
         <option>Framing & Structural Work</option>
@@ -47,6 +48,7 @@
         <option>Interior Work</option>
         <option>Electrical Services</option>
         <option>Other</option>
+        <option>General Inquiry</option>
       </select>
 
       <label for="message">Additional Details</label>
@@ -63,13 +65,6 @@
       </div>
     </form>
   </section>
-  <!-- Buttons -->
-<div class="quote-buttons">
-  <button type="submit" class="quote-btn">Submit</button>
-  <button type="button" class="quote-btn" onclick="window.location.href='index.html'">Back</button>
-</div>
-</form>
-</section>
 
 <script>
 document.getElementById('photos').addEventListener('change', function(event) {
