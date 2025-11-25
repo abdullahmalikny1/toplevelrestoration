@@ -1113,6 +1113,7 @@ main img {
   max-width: 1100px; /* same as your other content width */
   padding-left: 0px; /* aligns with other section titles */
   padding-right: 2rem;
+  margin-top: 20px;
 }
 
 /* Heading */
