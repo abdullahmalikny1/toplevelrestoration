@@ -607,6 +607,12 @@ body.service-page {
 body.service-page a {
   color: #FFD700;
 }
+/* Quote page full background */
+body.quote-page {
+  background-color: #0A192F;  /* same deep navy blue */
+  color: #fff;
+}
+
 /* ===== Reviews Page ===== */
 .reviews-header {
   text-align: center;
